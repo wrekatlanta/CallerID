@@ -1,1 +1,1 @@
-nohup java CallerID &
+nohup java -cp mysql-connector-java-3.0.11-stable-bin.jar:. CallerID &
