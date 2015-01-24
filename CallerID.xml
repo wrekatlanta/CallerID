@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!-- ====================================================================== 
+     Apr 22, 2005 11:24:08 AM                                                        
+
+     project    
+     description
+                   
+     jle                                                                
+     ====================================================================== -->
+<project name="CallerID" default="compile">
+    <description>
+            description
+    </description>
+
+    <property name="src.dir" value="org/wrek/CallerID"/>
+
+    <!-- ================================= 
+          target: default              
+         ================================= -->
+    <target name="compile" depends="depends" description="--> description">
+        <javac srcdir="${src.dir}" destdir="." verbose="off"></javac>
+    </target>
+
+    <!-- - - - - - - - - - - - - - - - - - 
+          target: depends                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="depends">
+    </target>
+
+    <target name="dist" depends="compile">
+        <jar destfile="CallerID.jar">
+			<fileset dir="." includes="org/wrek/CallerID/*.class" />
+			<manifest><attribute name="Main-Class" value="org.wrek.CallerID.CallerID"/></manifest>
+        </jar>
+    </target>
+</project>
+
+
